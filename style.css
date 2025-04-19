@@ -15,19 +15,67 @@ Use it to make something cool, have fun, and share what you've learned with othe
 html {
   font-family: "Montserrat";
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: #121517;
   color: #D9D9D9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
 }
 
 section {
   margin-bottom: 100px;
 }
 
+a:hover {
+  color: #35C66B;
+}
+
+.btn-arrow {
+  --size: 84px;
+  --icon-size:35px;
+  --border-radius:29px;
+  --border-width:3px;
+  width: calc(var(--size) - var(--border-width) * 2);
+  height: calc(var(--size) - var(--border-width) * 2);
+  border-radius: var(--border-radius);
+  background-color: #0B0C0D;
+  padding: 25px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-arrow:before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(204deg, #237249 0%, #35C66B 100%);
+  width: calc(100% + var(--border-width));
+  height: calc(100% + var(--border-width));
+  border-radius: calc(var(--border-radius) + 1px);
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon-svg {
+  height: var(--icon-size);
+  width: var(--icon-size);
+}
+
 .logo {
   max-width: 195px;
+}
+
+.text-gradient {
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(204deg, #237249 0%, #35C66B 100%);
 }
 
 .container {
@@ -72,6 +120,12 @@ section {
 }
 
 /**/
+.svg-sprite {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
 ::selection {
   color: #237249;
   background-color: #0B0C0D;
@@ -120,9 +174,7 @@ section {
 .header-nav__item {
   font-size: 20px;
   color: #D9D9D9;
-}
-.header-nav__item:hover {
-  color: #35C66B;
+  padding: 5px 0;
 }
 
 .mobile-container {
@@ -164,24 +216,107 @@ section {
   top: 18px;
 }
 .btn-burger.active span {
-  transform: rotate(-45deg);
+  transform: rotate(-45deg) translate(-7px, 5px);
 }
 .btn-burger.active span:before {
   opacity: 0;
   transform: rotate(90deg) translate(-15px, 0px);
 }
 .btn-burger.active span:after {
-  transform: rotate(90deg) translate(-15px, 0px);
+  transform: rotate(90deg) translate(-16px, 0px);
 }
 
 h1 {
   color: blue;
 }
 
-footer {
-  height: 100px;
-  background: #0B0C0D;
+.footer {
+  position: relative;
+  padding: 38px 0;
   margin-top: auto;
+  overflow: hidden;
+}
+.footer:before {
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #0B0C0D;
+  position: absolute;
+  z-index: -1;
+}
+.footer-row {
+  display: flex;
+}
+.footer-row:first-child {
+  margin-bottom: 88px;
+  align-items: flex-start;
+}
+.footer-row:last-child {
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-nav {
+  display: flex;
+  margin: 0 auto;
+  width: 785px;
+  gap: 24px;
+  padding: 0 12px;
+  justify-content: space-between;
+}
+.footer-nav__title {
+  font-size: 20px;
+  color: #BBB3B3;
+  margin-bottom: 8px;
+}
+.footer-nav__link {
+  color: #575454;
+  font-size: 20px;
+}
+.footer-nav__item {
+  margin-bottom: 8px;
+}
+.footer-telephone {
+  font-size: 26px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-telephone:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 340px;
+  height: 340px;
+  background: url(./assets/img/footer-decoration__green-light.png) center no-repeat;
+}
+.footer .logo {
+  position: relative;
+}
+.footer .logo:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 340px;
+  height: 340px;
+  background: url(./assets/img/footer-decoration__green-light.png) center no-repeat;
+}
+.footer-instagram {
+  position: relative;
+}
+.footer-instagram:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  background: url(./assets/img/footer-decoration__instagram-green-light.png) center no-repeat;
 }
 
 @media (min-width: 1025px) {
