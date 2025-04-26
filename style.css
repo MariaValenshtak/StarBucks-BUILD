@@ -108,6 +108,10 @@ a:hover {
   transition: 0.2s;
   position: relative;
 }
+.btn svg {
+  max-width: 28px;
+  max-height: 28px;
+}
 .btn:before {
   content: "";
   position: absolute;
@@ -230,6 +234,7 @@ a:hover {
 }
 
 .icon-svg {
+  vertical-align: middle;
   height: var(--icon-size);
   width: var(--icon-size);
 }
@@ -455,7 +460,6 @@ a:hover {
 }
 
 .advantage {
-  width: 228px;
   text-align: center;
 }
 .advantage-title {
@@ -490,6 +494,61 @@ a:hover {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.we-make__video {
+  position: relative;
+}
+.we-make__video .btn {
+  position: absolute;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+}
+.we-make__video img {
+  mask: url(./assets/img/we-make___cooking-mask.png) no-repeat;
+}
+
+.template-content {
+  --translate-y:36px;
+  --translate-x:45px;
+  padding-top: var(--translate-y);
+  display: flex;
+  justify-content: space-between;
+  gap: var(--translate-x);
+}
+.template-content__img-box {
+  position: relative;
+  max-width: 465px;
+  width: 100%;
+}
+.template-content__img-box img {
+  transform: translate(var(--translate-x), calc(var(--translate-y) * -1));
+  mask: url(./assets/img/we-make___bg.png) no-repeat;
+  box-shadow: -4.91px 9.13px 22.81px #000000;
+}
+.template-content__img-box .label {
+  position: absolute;
+  top: -23px;
+  right: -32px;
+  z-index: 1;
+  --size: 162px;
+}
+.template-content__img-box::before {
+  content: "";
+  position: absolute;
+  background-color: #237249;
+  mask: url(./assets/img/we-make___bg.png) no-repeat;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+.template-content__info-box {
+  max-width: 457px;
+  width: 100%;
 }
 
 .footer {
@@ -582,6 +641,11 @@ a:hover {
   background: url(./assets/img/footer-decoration__instagram-green-light.png) center no-repeat;
 }
 
+@media screen and (min-width: 768px) {
+  .advantage {
+    width: 228px;
+  }
+}
 @media (min-width: 1025px) {
   .btn-burger {
     display: none;
@@ -692,6 +756,20 @@ a:hover {
   }
   .advantages {
     margin: 0 25px 100px;
+    padding: 36px 48px;
+    gap: 24px;
+  }
+  .advantage-img {
+    --size: 116px;
+  }
+  .advantage-img img {
+    --size: 138px;
+  }
+  .advantage-description {
+    font-size: 17px;
+  }
+  .advantage-title {
+    font-size: 26px;
   }
   .footer {
     padding: 21px 0 10px;
@@ -760,6 +838,39 @@ a:hover {
   }
   .banner-advantage__description {
     font-size: 14px;
+  }
+  .advantages {
+    flex-direction: column;
+    align-items: center;
+    border-radius: 26px;
+    max-width: 260px;
+    margin: 0 auto 64px;
+    padding: 32px 42px;
+  }
+  .advantages .label {
+    top: -24px;
+    left: 211px;
+  }
+  .advantages .label:before {
+    transform: translate(-50%, -50%);
+  }
+  .advantage-img {
+    --size: 86px;
+    width: var(--size);
+    height: var(--size);
+  }
+  .advantage-img img {
+    --size: 104px;
+    width: var(--size);
+    height: var(--size);
+  }
+  .advantage-title {
+    font-size: 22px;
+  }
+  .advantage-description {
+    font-size: 14px;
+    max-width: 150px;
+    margin: 0 auto;
   }
   .label {
     --size: 82px;
