@@ -228,6 +228,15 @@ a:hover {
   font-size: 32px;
 }
 
+.hovered {
+  animation: 1s hovered infinite ease-in-out alternate;
+}
+
+@keyframes hovered {
+  to {
+    transform: scale(1.2);
+  }
+}
 .banner-advantage__description {
   display: flex;
   flex-direction: column;
@@ -342,6 +351,7 @@ a:hover {
   background-color: rgba(18, 21, 23, 0.5215686275);
   width: 100%;
   position: fixed;
+  z-index: 2;
 }
 .header .container {
   --gap: 94px;
