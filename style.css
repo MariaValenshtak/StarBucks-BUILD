@@ -627,7 +627,7 @@ a:hover {
   font-weight: 600;
 }
 .show-hide.show {
-  color: red;
+  color: rgb(75, 1, 1);
 }
 
 .video-description__content {
