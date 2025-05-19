@@ -124,10 +124,10 @@ a:hover {
   background: url(./assets/img/template-decoration_green.png) center/contain no-repeat;
   z-index: -1;
 }
-.btn:not(.btn-arrow):hover {
+.btn:not(.btn-arrow):not(.btn-volume):hover {
   color: #fff;
 }
-.btn:not(.btn-arrow):hover:before {
+.btn:not(.btn-arrow):not(.btn-volume):hover:before {
   width: 350px;
   height: 350px;
 }
@@ -162,7 +162,7 @@ a:hover {
   padding: 16px 35px;
 }
 
-.btn-arrow {
+.btn-arrow, .btn-volume {
   --size: 87px;
   --icon-size:35px;
   --border-radius:29px;
@@ -177,7 +177,7 @@ a:hover {
   align-items: center;
   justify-content: center;
 }
-.btn-arrow:before {
+.btn-arrow:before, .btn-volume:before {
   content: "";
   position: absolute;
   background: linear-gradient(204deg, #237249 0%, #35C66B 100%);
@@ -525,6 +525,21 @@ a:hover {
   mask: url(./assets/img/we-make___cooking-mask.png) no-repeat;
 }
 
+.we-make__video {
+  position: relative;
+}
+.we-make__video .btn {
+  position: absolute;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+}
+.we-make__video img {
+  mask: url(./assets/img/we-make___cooking-mask.png) no-repeat;
+}
+
 .template-content {
   --translate-y:36px;
   --translate-x:45px;
@@ -563,6 +578,66 @@ a:hover {
 .template-content__info-box {
   max-width: 457px;
   width: 100%;
+}
+
+.custom-video {
+  --size: 60px;
+  border: 1px solid white;
+  border-radius: 42px;
+  padding: var(--size);
+  background: linear-gradient(230deg, #fff 3.94%, #e5e5e5 64.08%, #fbfbfb 88.62%);
+}
+.custom-video video {
+  width: 100%;
+  margin-bottom: calc(var(--size) / 2);
+}
+
+.current-time {
+  color: #121517;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 12px 0;
+  font-size: 24px;
+  gap: 17px;
+}
+.current-time button:hover {
+  color: #35C66B;
+}
+
+.btn-volume.active .volume-off {
+  opacity: 1;
+}
+
+.volume-off {
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.video-description {
+  color: #121517;
+}
+.video-description h4 {
+  color: #000;
+}
+
+.show-hide {
+  margin-top: 24px;
+  font-weight: 600;
+}
+.show-hide.show {
+  color: red;
+}
+
+.video-description__content {
+  height: 100px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.video-description__content.show {
+  height: auto;
 }
 
 .modal {
@@ -758,7 +833,7 @@ a:hover {
     padding-left: 25px;
     padding-right: 25px;
   }
-  .btn.btn-arrow {
+  .btn.btn-arrow, .btn.btn-volume {
     padding: 10px;
     --size:56px;
     --icon-size:23px;
@@ -855,7 +930,7 @@ a:hover {
   .footer-instagram {
     max-width: 32px;
   }
-  .btn.btn-arrow {
+  .btn.btn-arrow, .btn.btn-volume {
     margin-left: auto;
   }
 }
