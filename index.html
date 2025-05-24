@@ -8,6 +8,7 @@
     <title>StarBucks</title>
     <link rel="shortcut icon" href="./assets/img/favicon.svg">
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.min.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
@@ -96,70 +97,6 @@
                 <h6 class="advantage-description">Cafe will serveat the most pleasant prices</h6>
             </div>
         </section>
-        <div class="container">
-            <div class="custom-video">
-                <video id="video" src="./assets/img/test-video.mp4"></video>
-                <div class="btn-row">
-                    <button id="play" class="btn btn-primary">
-                        <svg class="icon-svg">
-                            <use href="#icon-play"></use>
-                        </svg>
-                    </button>
-                    <button id="pause" class="btn btn-secondary">
-                        <svg class="icon-svg">
-                            <use href="#icon-pause"></use>
-                        </svg>
-                    </button>
-                    <button id="stop" class="btn btn-secondary">
-                        <svg class="icon-svg">
-                            <use href="#icon-stop"></use>
-                        </svg>
-                    </button>
-                    <button id="volume" class="btn-volume">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 56 60" fill="none">
-                            <g id="volume">
-                                <g class="volume-off">
-                                    <path id="Vector_3" d="M53.9999 23.4712L47.6687 30.2327L41.3374 36.9943" stroke="white" stroke-width="4" />
-                                    <path id="Vector_2" d="M41.3375 23.2252L47.6687 29.9868L54 36.7483" stroke="white" stroke-width="4" />
-                                </g>
-                                <g class="volume-on">
-                                    <path id="vector_1" d="M9.86534 17.4473C10.2064 17.0548 29.4124 4.04712 29.4124 4.04712C33.9611 29.2493 33.9611 29.3722 29.0436 56.2955L9.00478 41.9118M9.86534 17.4473L9.00478 41.9118M9.86534 17.4473C9.86534 17.4473 5.63279 16.089 3.59554 17.4473C2.12038 18.4308 1.25985 41.5076 2.85792 41.9118C5.18512 42.5005 9.00478 41.9118 9.00478 41.9118" stroke="white" stroke-width="4" />
-                                </g>
-                            </g>
-                        </svg>
-
-                    </button>
-                </div>
-                <div class="current-time">
-                    <button id="part-1">1:20 - learn html</button>
-                    <button id="part-2">2:28 - learn class</button>
-                    <button id="part-3">3:47 - cpecific css</button>
-                </div>
-                <div class="video-description">
-                    <div class="video-description__content">
-                        <h4>Lorem, ipsum.</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla reprehenderit ipsam aliquam impedit
-                            labore facere minima natus officiis praesentium ex ipsa error et laboriosam tempore asperiores
-                            voluptatem, non dolorem accusantium?</p>
-                        <ul>
-                            <li>Lorem ipsum dolor sit amet.</li>
-                            <li>Lorem ipsum dolor sit amet.</li>
-                            <li>Lorem ipsum dolor sit amet.</li>
-                            <li>Lorem ipsum dolor sit amet.</li>
-                            <li>Lorem ipsum dolor sit amet.</li>
-                        </ul>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident eligendi fugit, possimus suscipit
-                            numquam a accusantium et. Fugiat earum omnis quidem culpa vitae rerum eum incidunt animi voluptatem
-                            architecto, dolores eligendi eaque aliquam minima nesciunt molestiae fuga saepe asperiores possimus
-                            unde, odit accusantium? Distinctio et, culpa cum commodi dolores impedit, repellendus eius aut vitae
-                            consequuntur corporis?</p>
-                    </div>
-                    <button class="show-hide">show</button>
-
-                </div>
-            </div>
-
-        </div>
         <section class="we-make">
             <div class="container">
                 <div class="template-content">
@@ -182,6 +119,28 @@
                         Cooking Process</a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section class="product-slider">
+            <div class="template-title template-title_row">
+                <h2>New Our <span class="text-gradient">Products</span></h2>
+                <h6>Have time to buy the most harmonious drinks in the new Starbucks coffee and don't forget about the
+            discount! Starbucks coffee and don't forget about the discount!</h6>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-product swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </div>
         </section>
@@ -320,11 +279,70 @@
                 <path d="M2 20.0574V4.05737C2 2.9528 2.89543 2.05737 4 2.05737H20C21.1046 2.05737 22 2.9528 22 4.05737V20.0574C22 21.1619 21.1046 22.0574 20 22.0574H4C2.89543 22.0574 2 21.1619 2 20.0574Z" stroke="white" stroke-width="3" />
             </symbol>
         </svg>
-        <div id="cooking" class="modal" data-close-modal>
+        <div id="cooking" class="modal modal-video" data-close-modal>
             <div class="modal-body">
                 <a href="#" class="btn btn-close" data-close-modal></a>
-                <button class="btn btn-secondary" data-close-modal>Close</button>
-                <button class="btn btn-primary" data-close-modal>Ok</button>
+                <div class="custom-video">
+                    <video id="video" src="./assets/img/test-video.mp4"></video>
+                    <div class="btn-row">
+                        <button id="play" class="btn btn-primary">
+                            <svg class="icon-svg">
+                                <use href="#icon-play"></use>
+                            </svg>
+                        </button>
+                        <button id="pause" class="btn btn-secondary">
+                            <svg class="icon-svg">
+                                <use href="#icon-pause"></use>
+                            </svg>
+                        </button>
+                        <button id="stop" class="btn btn-secondary">
+                            <svg class="icon-svg">
+                                <use href="#icon-stop"></use>
+                            </svg>
+                        </button>
+                        <button id="volume" class="btn-volume">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 56 60" fill="none">
+                                <g id="volume">
+                                    <g class="volume-off">
+                                        <path id="Vector_3" d="M53.9999 23.4712L47.6687 30.2327L41.3374 36.9943" stroke="white" stroke-width="4" />
+                                        <path id="Vector_2" d="M41.3375 23.2252L47.6687 29.9868L54 36.7483" stroke="white" stroke-width="4" />
+                                    </g>
+                                    <g class="volume-on">
+                                        <path id="vector_1" d="M9.86534 17.4473C10.2064 17.0548 29.4124 4.04712 29.4124 4.04712C33.9611 29.2493 33.9611 29.3722 29.0436 56.2955L9.00478 41.9118M9.86534 17.4473L9.00478 41.9118M9.86534 17.4473C9.86534 17.4473 5.63279 16.089 3.59554 17.4473C2.12038 18.4308 1.25985 41.5076 2.85792 41.9118C5.18512 42.5005 9.00478 41.9118 9.00478 41.9118" stroke="white" stroke-width="4" />
+                                    </g>
+                                </g>
+                            </svg>
+
+                        </button>
+                    </div>
+                    <div class="current-time">
+                        <button id="part-1">1:20 - learn html</button>
+                        <button id="part-2">2:28 - learn class</button>
+                        <button id="part-3">3:47 - cpecific css</button>
+                    </div>
+                    <div class="video-description">
+                        <div class="video-description__content">
+                            <h4>Lorem, ipsum.</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla reprehenderit ipsam aliquam impedit
+                                labore facere minima natus officiis praesentium ex ipsa error et laboriosam tempore asperiores
+                                voluptatem, non dolorem accusantium?</p>
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident eligendi fugit, possimus suscipit
+                                numquam a accusantium et. Fugiat earum omnis quidem culpa vitae rerum eum incidunt animi voluptatem
+                                architecto, dolores eligendi eaque aliquam minima nesciunt molestiae fuga saepe asperiores possimus
+                                unde, odit accusantium? Distinctio et, culpa cum commodi dolores impedit, repellendus eius aut vitae
+                                consequuntur corporis?</p>
+                        </div>
+                        <button class="show-hide">show</button>
+
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -334,8 +352,10 @@
                 <a href="#" class="btn btn-close" data-close-modal></a>
                 <h2>feedback</h2>
                 <p>modal for feedback</p>
-                <button class="btn btn-secondary" data-close-modal>Close</button>
-                <button class="btn btn-primary" data-close-modal>Ok</button>
+                <div class="btn-row">
+                    <button class="btn btn-secondary" data-close-modal>Close</button>
+                    <button class="btn btn-primary" data-close-modal>Ok</button>
+                </div>
             </div>
 
         </div>
@@ -345,11 +365,14 @@
                 <a href="#" class="btn btn-close" data-close-modal></a>
                 <h2>qwerty</h2>
                 <p>test modal for qwerty</p>
-                <button class="btn btn-secondary" data-close-modal>Close</button>
-                <button class="btn btn-primary" data-close-modal>Ok</button>
+                <div class="btn-row">
+                    <button class="btn btn-secondary" data-close-modal>Close</button>
+                    <button class="btn btn-primary" data-close-modal>Ok</button>
+                </div>
             </div>
 
         </div>
+        <script src="assets/js/swiper-bundle.min.js"></script>
         <script src="assets/js/custom.js"></script>
         <script src="assets/js/modal.js"></script>
         <script src="assets/js/videoplayer.js"></script>

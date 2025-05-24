@@ -1,4 +1,4 @@
-// const triger = document.querySelector('#triger')
+    // const triger = document.querySelector('#triger')
 // const modal = document.querySelector('.modal')
 // const close = document.querySelector('.btn-close')
 // const body = document.querySelector('body')
@@ -23,11 +23,20 @@ const closeTrigers = document.querySelectorAll('[data-close-modal]')
 function showModal(modal) {
     modal.classList.add('d-flex')
     body.classList.add('overflow-hidden')
+
+    if(modal.id == 'cooking') {
+        playVideo()
+    }
 }
 
-function closeModal(element) {
-    element.closest('.modal').classList.remove('d-flex')
+function closeModal(event) {
+event.preventDefault()
+stopVideo()
+
+if (event.target.hasAttribute('data-close-modal')) {
+    event.target.closest('.modal').classList.remove('d-flex')
     body.classList.remove('overflow-hidden')
+} 
 }
 
 
@@ -45,6 +54,6 @@ trigers.forEach(
 closeTrigers.forEach(function(element){
     element.addEventListener('click', function(event){
         event.preventDefault()
-        closeModal(element)
+        closeModal(event)
     })
 })
